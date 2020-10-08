@@ -14,9 +14,10 @@
             height: 100vh;
             border: 10px solid #14a76c;
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: 200px 200px;
-            grid-gap: 20px;
+            grid-template-areas: 
+              "header header header"
+              "nav main ads"
+              "footer footer footer"
         }
 
         .grid-item {
@@ -26,43 +27,42 @@
         }
 
         .item-1 {
-            
+            grid-area: header;
         }
 
         .item-2 {
-            justify-self: center;
-            align-self: center;
+            grid-area: nav;
         }
 
         .item-3 {
-            
+            grid-area: main;
         }
         
         .item-4 {
-            
+            grid-area: ads;
         }
 
         .item-5 {
-            
+            grid-area: footer;
         }
     </style>
 </head>
 <body>
     <div class="grid-container">
         <div class="grid-item item-1">
-            item 1
+            item 1 - Header
         </div>
         <div class="grid-item item-2">
-            item 2
+            item 2 - Nav
         </div>
         <div class="grid-item item-3">
-            item 3
+            item 3 - Main
         </div>
         <div class="grid-item item-4">
-            item 4
+            item 4 - Ads
         </div>
         <div class="grid-item item-5">
-            item 5
+            item 5 - Footer
         </div>
     </div>
 </body>
